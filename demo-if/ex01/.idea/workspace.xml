@@ -1,14 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1eb27879-98a9-4411-9cfe-1c2054872d91" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Nhap-thong-tin-hang-hoa.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Tao-form-co-ban/Tao-form-co-ban.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Tao-form-co-ban/Tao-form-co-ban.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../danh-sach-san-pham/danh-sach-san-pham.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../my-Javascript/su-dung-alert.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../my-Javascript/su-dung-alert.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../my-Javascript/su-dung-document.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../my-Javascript/su-dung-document.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../my-Javascript/su-dung-ham-console.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../my-Javascript/su-dung-ham-console.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../my-Javascript/su-dung-the-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../my-Javascript/su-dung-the-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../tao-bang-nang-cao/lich.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../tao-bang-nang-cao/lich.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../tao-form-don-gian/so-thich-cua-ban.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../tao-form-don-gian/so-thich-cua-ban.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1YjlWMAOVpbrcLbJ78xTAQxG8Ho" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ham-dieu-kien/ex01.html" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1eb27879-98a9-4411-9cfe-1c2054872d91" name="Default Changelist" comment="" />
+      <created>1583463914899</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583463914899</updated>
+      <workItem from="1583463916022" duration="871000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1583464020663">

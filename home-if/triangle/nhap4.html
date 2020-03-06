@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Triangle</title>
+</head>
+<body>
+<script>
+
+    // Nhập 3 cạnh
+
+    let leg1 = parseInt(prompt("Enter leg1 = "));
+    let leg2 = parseInt(prompt("Enter leg2 = "));
+    let leg3 = parseInt(prompt("Enter leg3 = "));
+    let perimeter, factor, area;
+
+    document.write("Leg 1 = "+ leg1);
+    document.write("<br/>");
+
+    document.write("Leg 2 = "+ leg2);
+    document.write("<br/>");
+
+    document.write("Leg 3 = "+ leg3);
+    document.write("<br/>");
+
+    // Chứng minh tam giác
+    if ((leg1+ leg2) > leg3 && (leg1 + leg3) > leg2 && (leg2 + leg3) > leg1) {
+        document.write("These are the three sides of the triangle.");
+        document.write("<br/>");
+
+        // Tính chu vi
+        perimeter=leg1+leg2 +leg3;
+        document.write("Perimeter = "+perimeter);
+        document.write("<br/>");
+
+        //Tính diện tích
+        factor=(leg1+leg2+leg3)/2;
+        area=Math.sqrt(factor*((factor-leg1)*(factor-leg2)*(factor-leg3)));
+        document.write("Area = "+area);
+        document.write("<br/>");
+
+    }
+    else document.write("These are not the 3 sides of the triangle.");
+
+    // Xét tam giác
+    {
+        if ( leg1 * leg1 + leg2 * leg2 === leg3 * leg3 || leg1 * leg1 + leg3 * leg3 === leg2 * leg2 || leg2 * leg2 + leg3 * leg3 === leg1 * leg1 ) {
+            document.write("This is a right triangle.");
+            document.write("<br/>");
+        }
+    }
+
+    {
+        if ((leg1===leg2)&&(leg1===leg3)) {
+            document.write("This is an equilateral triangle.");
+            document.write("<br/>");
+        }
+        else {
+            if ((leg1 === leg2) || (leg1 === leg3) || (leg2 === leg3)) {
+                document.write("This is an isosceles triangle.");
+                document.write("<br/>");
+            }
+        }
+    }
+
+
+
+</script>
+
+
+
+</body>
+</html>
