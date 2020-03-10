@@ -1,0 +1,39 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhập tháng" id="isMonth">
+<button onclick="countDay()">Tính số ngày</button><br>
+<div id="result"></div>
+<script>
+    function countDay() {
+        let month;
+        month = parseInt(document.getElementById('isMonth').value);
+        document.getElementById('result').innerHTML = 'Tháng ' + month + ' có ' + countMonth(month);
+    }
+    function countMonth(month) {
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                return '31 ngày';
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                return '30 ngày';
+            case 2:
+                return '28 hoặc 29 ngày';
+            default:
+                return " không phải là tháng ";
+        }
+    }
+</script>
+
+</body>
+</html>
