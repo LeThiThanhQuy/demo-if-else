@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<input type="text" id="yourAge" placeholder="Enter your age">
+<input type="button" onclick="checkAge()" value="Check">
+
+<div id="result"></div>
+<script>
+    /* Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10. */
+    function checkAge() {
+        let age = parseInt(document.getElementById("yourAge").value);
+        let result;
+        if (age >= 15 && age <= 18) {
+            document.getElementById("result").innerHTML = "Đủ điều kiện vào học lớp 10";
+        } else document.getElementById("result").innerHTML = "Không đủ điều kiện vào học lớp 10";
+    }
+
+</script>
+
+</body>
+</html>

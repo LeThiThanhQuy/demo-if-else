@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="test" placeholder="Test score">
+<input type="text" id="mid" placeholder="Mid-term exam score">
+<input type="text" id="final" placeholder="Final exam score">
+<button type="button" onclick="rank()">Check rank</button><br>
+
+<div id="ave"></div><br>
+<div id="result"></div>
+<script>
+    //Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ
+    function averageScore() {
+        let testScore = Number(document.getElementById("test").value);
+        let midScore = Number(document.getElementById("mid").value);
+        let finalScore = Number(document.getElementById("final").value);
+        let average;
+        average = testScore*0.1 + midScore*0.2 + finalScore*0.7;
+        document.getElementById("ave").innerHTML = "Average score: " + average;
+        return average;
+    }
+    function rank() {
+        let str ="";
+        if (averageScore()<5) {
+            str = "Xếp loại Yếu";
+        } else if (averageScore() < 6.5) {
+            str = "Xếp loại TB";
+        } else if (averageScore() < 8) {
+            str = "Xếp loại Khá";
+        } else str = "Xếp loại Giỏi";
+        document.getElementById("result").innerHTML = str;
+    }
+</script>
+
+</body>
+</html>
