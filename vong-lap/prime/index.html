@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The first 20 primes</title>
+</head>
+<body>
+<input type="text" id="checkNum" placeholder="Enter your number">
+<input type="button" value="Check" onclick="listPrime()"><br>
+
+<span id="result"></span>
+<script>
+    function checkPrime(n) {
+        for (let i = 2; i <= Math.sqrt(n); i++)
+            if (n % i === 0)
+                return false;
+        return true;
+    }
+
+    function listPrime() {
+        let count = 0;
+        let num = document.getElementById("checkNum").value;
+        num = Number(num);
+        let n = 2;
+        let str = "";
+        while (count < num) {
+            if (checkPrime(n)) {
+                count++;
+                str += n + ", ";
+            }
+            n++;
+        }
+
+        document.getElementById("result").innerHTML = "The first " + num + " primes: "  + str ;
+    }
+</script>
+</body>
+</html>
