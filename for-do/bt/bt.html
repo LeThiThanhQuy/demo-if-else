@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    /*
+Quít ngon mỗi quả chia ba
+Cam ngon mỗi quả chia ra làm mười
+Mỗi người một miếng trăm người
+Có mười bảy quả không nhiều đủ chia
+tính số cam, số quít
+*/
+        let cam;
+        let quyt;
+        for ( cam = 0; cam <= 17; cam ++)
+            for (quyt= 0; quyt <= 17; quyt ++)
+                if (cam + quyt ==17 && cam*10 +quyt*3 ==100)
+                    console.log("Số cam: " + cam);
+                    console.log("Số quýt: " + quyt);
+</script>
+
+</body>
+</html>
