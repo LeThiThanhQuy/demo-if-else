@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script>    /*
+    Nhập 2 giá trị tháng cùng 1 năm.
+    Tính số ngày giữa 2 tháng này
+    */
+function countDay() {
+    let getMonth1 = document.getElementById("month1").value;
+    getMonth1 = Number.parseInt(getMonth1);
+    let getMonth2 = document.getElementById("month2").value;
+    getMonth1 = Number.parseInt(getMonth2);
+    let getYear = document.getElementById("year").value;
+    getYear = Number.parseInt(getYear);
+    let day = 0;
+    day += tinhNgay(getMonth1,getYear);
+}
+function tinhNgay(getMonth1, getYear) {
+    switch (getMonth1) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12: return 31;
+        case 4:
+        case 6:
+        case 9:
+        case 11: return 30;
+        case 2: if(kiemTraNamNhuan(getYear))
+            return 29;
+        else return 28;
+    }
+}
+function kiemTraNamNhuan(getYear) {
+    return ( getYear % 400 ===0 ) || ( getYear % 4 ===0 && getYear % 100 !==0 )
+}
+
+    }
+</script>
+</head>
+<body>
+<input type="text" id="month1" placeholder="Enter the month 1 "> -
+<input type="text" id="month2" placeholder="Enter the month 2 ">
+<input type="text" id="year" placeholder="Enter the year "><br>
+<button type="button" id="countDay">Count Day</button>
+</body>
+</html>

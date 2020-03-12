@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9dccb6c4-1d34-44b9-85be-dcc20523dbda" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/index-long-for.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo-if/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-if/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo-if/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-if/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo-if/employee/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-if/employee/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo-if/ex01-switch-case/sign.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-if/ex01-switch-case/sign.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo-if/may-tinh/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-if/may-tinh/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo-if/triad-operator/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-if/triad-operator/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo-if/triad-operator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-if/triad-operator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo-if/triad-operator/triad-operator.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-if/triad-operator/triad-operator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../doc9So/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../doc9So/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../doc9So/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../doc9So/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../for-do/bt/bt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../for-do/bt/ex01.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../for-do/ex/ex01.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../for-do/ga-cho/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../for-do/ga-cho/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../for-do/ga-cho/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../for-do/ga-cho/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../for-do/ga-cho/ga-cho.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../for-do/luyen-tap/ex01.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../for-do/luyen-tap/ex02.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../for-do/my-eighth-js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../for-do/thuc-hanh-for/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../for-do/thuc-hanh-for/index02.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../for-do/thuc-hanh/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../for-do/thuc-hanh/index02.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../home-if/demo-pass/.idea/demo-pass.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../home-if/demo-pass/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../home-if/demo-pass/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../home-if/demo-pass/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../home-if/demo-pass/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../home-if/demo-pass/enter-pass.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1Yz0IopfZxcJwReKfOJDI7sZxLA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9dccb6c4-1d34-44b9-85be-dcc20523dbda" name="Default Changelist" comment="" />
+      <created>1583930037502</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583930037502</updated>
+      <workItem from="1583930038598" duration="248000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

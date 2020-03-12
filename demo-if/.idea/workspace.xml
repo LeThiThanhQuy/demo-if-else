@@ -2,10 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca5ea872-57b3-4e33-9325-b2d715ea476f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../1-Tự học/bt máy tính/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1-Tự học/bt máy tính/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1-Tự học/bt máy tính/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/do-you-love-me/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docSo/docSo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee/employee.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex01-switch-case/.idea/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex01-switch-case/.idea/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex01-switch-case/.idea/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex01-switch-case/.idea/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex01/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game-puzzle/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/may-tinh/add.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/may-tinh/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/may-tinh/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/triad-operator/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/triad-operator/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/triad-operator/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/triad-operator/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/triad-operator/triad-operator.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Nhap-thong-tin-hang-hoa.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Tao-form-co-ban/Tao-form-co-ban.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tao-form-co-ban/Tao-form-co-ban.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../danh-sach-san-pham/danh-sach-san-pham.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triad-operator/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/triad-operator/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/triad-operator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/triad-operator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/triad-operator/triad-operator.html" beforeDir="false" afterPath="$PROJECT_DIR$/triad-operator/triad-operator.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../my-Javascript/su-dung-alert.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../my-Javascript/su-dung-alert.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../my-Javascript/su-dung-document.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../my-Javascript/su-dung-document.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../my-Javascript/su-dung-ham-console.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../my-Javascript/su-dung-ham-console.html" afterDir="false" />
@@ -20,6 +47,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\nga\WebstormProjects\module1\demo-if\.idea" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1YjlRv9QO0k0KNkpp9K8ZrxVpIO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -43,6 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583463880272</updated>
       <workItem from="1583463882463" duration="33000" />
+      <workItem from="1583894214166" duration="13000" />
     </task>
     <servers />
   </component>

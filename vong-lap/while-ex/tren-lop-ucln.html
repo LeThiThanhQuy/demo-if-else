@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính UCLN của 2 số</title>
+    <script>
+        /*Nhập hai số nguyên duong a và b. Tính UCLN (a, b)
+        Thuật toán Euclid để tìm USCLN của 2 số a và b.
+        B1: Nếu a = b thì USCLN (a, b) =a và Kết thúc
+        B2: + Nếu a < b thì b = b - a
+            + Nếu a > b thì a = a - b
+            Quay lại B1
+
+         */
+        function ucln(a, b) {
+            while (a != b)
+                if (a > b)
+                    a -= b;
+                else b -= a;
+                return a;
+        }
+        function tinhUCLN() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "UCLN của " + a + " và " + b + " là " + ucln(a,b);
+
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="num1" placeholder="Number 1">
+<input type="text" id="num2" placeholder="Number 2">
+<button type="button" onclick="tinhUCLN()">Tính UCLN</button><br>
+<span id="result"></span>
+
+</body>
+</html>

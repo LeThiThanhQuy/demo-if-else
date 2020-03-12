@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Đổi nhiệt độ</title>
 </head>
 <body>
-$END$
+<input type="text" id="tempC" placeholder="Enter temperature">
+<button type="button" id="">Change to F</button>
+<script>
+    let c;
+    let f;
+
+    c=prompt("Temperature C: ");
+    f=1.8*Number.parseInt(c)+32;
+    document.write("Nhiệt độ Celsius: "+c ); document.write("C");
+    document.write("<br/>");
+    document.write("Chuyển sang Fahrenheit = "+f );document.write("F");
+
+
+</script>
+
 </body>
 </html>

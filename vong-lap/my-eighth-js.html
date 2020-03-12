@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script>
+        // Nhập 2 số nguyên dương m và n. Tính tổng các giá trị chẵn từ m đến n
+        // Nhập 2 số nguyên dương m và n. Tính tổng các giá trị chính phương từ m đến n
+
+   function kiemTraChinhPhuong(n) {
+       //Một số là số chính phương khi giá trị căn bậc hai của nó là số nguyên
+       return Number.isInteger(Math.sqrt(n));
+
+   }
+   function calSum() {
+        let m = document.getElementById("m");
+         m = Number.parseInt(m.value);
+         let n = document.getElementById("n");
+         n = Number.parseInt(n.value);
+
+         let s = 0, i;
+         for (i = m; i <=n; i++) {
+             //if (i % 2 == 0)
+             if (kiemTraChinhPhuong(i))
+                 s += i;
+             document.getElementById("sum").innerHTML = " " + s;
+         }
+
+   }
+</script>
+</head>
+<body>
+<div>
+    <p>Nhập m: <input type="text" id="m" value="0" onkeyup="calSum()"></p>
+    <p>Nhập m: <input type="text" id="n" value="0" onkeyup="calSum()"></p>
+    <p>Tổng là <span id="sum">0</span> </p>
+</div>
+
+</body>
+</html>

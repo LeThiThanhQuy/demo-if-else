@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <script>
+        /*   
+b2. tính tổng các số chẵn trong khoảng [a,b] a,b là các số nhâp vào
+ví du:
+[1,7] = 2 + 4 + 6 = 12
+         */
+        function sumEven() {
+            let startNum = prompt("Enter start number: ");
+            startNum = parseInt(startNum);
+            let overNum = prompt("Enter destination: ");
+            overNum = parseInt(overNum);
+            let sum = 0;
+            if (startNum < overNum) {
+                for (let i = startNum; i <= overNum; i++) {
+                    if (i % 2 === 0) {
+                        sum += i;
+                    }
+                }
+                document.getElementById("result").innerHTML = sum;
+
+            } else document.write("not value");
+        }
+    </script>
 </head>
 <body>
-$END$
+<input type="button" onclick="sumEven()" value="Sum even">
+<div id="result"></div>
+
 </body>
 </html>

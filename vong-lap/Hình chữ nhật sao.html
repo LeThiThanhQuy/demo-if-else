@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
+<script>
+    function disPlay() {
+        let char = "";
+        let wid = Number(document.getElementById("width").value);
+        let height = Number(document.getElementById("length").value);
+        for (let row = 0; row < height; row++) {
+            for (let col = 0; col < wid; col++) {
+                if (col === 0 || row === 0 || col === wid - 1 || row === height - 1) {
+                    char += "*";
+                } else char += "&nbsp" + "&nbsp";
+            }
+            char += "<br>";
+        }
+        document.getElementById("result").innerHTML = char;
+
+    }
+
+</script>
 <body>
-$END$
+<input type="text" id="width" placeholder="Enter width">
+<input type="text" id="length" placeholder="Enter height"><br>
+<button type="button" onclick="disPlay()">Painting</button>
+<div id="result"></div>
+
 </body>
 </html>

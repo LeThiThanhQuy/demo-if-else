@@ -2,9 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Đọc số có 9 chữ số</title>
 </head>
 <body>
-$END$
+<input type="text" id="iN" /><br>
+<input type="button" onclick="checkN()" value="Check">
+<div id="result"></div><br>
+<div id="output"></div>
+<script>
+
+    function doc1So(n) {
+        switch (n) {
+            case 0:
+                return " Không";
+            case 1:
+                return " Một";
+            case 2:
+                return " Hai";
+            case 3:
+                return " Ba";
+            case 4:
+                return " Bốn";
+            case 5:
+                return " Năm";
+            case 6:
+                return " Sáu";
+            case 7:
+                return " Bảy";
+            case 8:
+                return " Tám";
+            case 9:
+                return " Chín";
+            default :
+                return " Không biết số này";
+        }
+    }
+    function doc9So(n) {
+        let tramTrieu = Math.floor(n / 100000000);
+        let chucTrieu = Math.floor(n / 10000000) % 10;
+        let trieu = Math.floor(n / 1000000) % 10;
+        let tramNghin = Math.floor(n / 100000) % 10;
+        let chucNghin = Math.floor(n / 10000) % 10;
+        let nghin = Math.floor(n / 1000) % 10;
+        let tram = Math.floor(n / 100) % 10;
+        let chuc = Math.floor(n / 10) % 10;
+        let dv = n % 10;
+        let str = "";
+        {
+            str += doc1So(tramTrieu) + " trăm";
+            if (chucTrieu === 1) {
+                str += " mười";
+            } else if (chucTrieu === 0) {
+                str += " linh"
+            } else
+                str += doc1So(chucTrieu) + " mươi";
+        }
+
+        {
+        if (trieu === 0) {
+            str += " triệu";
+        } else
+            str += doc1So(trieu) + " triệu";
+        str += doc1So(tramNghin) + " trăm";
+
+
+
+        if (chucNghin === 1) {
+            str += " mười";
+        } else if (chucNghin === 0) {
+            str += " linh";
+        } else
+            str += doc1So(chucNghin) + "mươi";
+
+        if (nghin === 0) {
+            str += "nghìn";
+        } else str += doc1So(nghin) + " nghìn";
+
+        str += doc1So(tram) + " trăm";
+        if (chuc === 1) {
+            str += " mười";
+        } else if (chuc === 0) {
+            str += " linh";
+        } else
+            str += doc1So(chuc);
+        if (dv === 1) {
+            str += " mốt";
+        } else
+            str += doc1So(dv);
+        return str;
+
+ function checkN() {
+     let n = document.getElementById("iN").value;
+     if (n.length === 9) {
+         n = parseInt(n);
+         document.getElementById("result").innerHTML = "Số đã nhập là: " + doc9So(n);
+     } else
+         document.getElementById("output").innerHTML = "Không phải là số có 9 chữ số";
+ }
+
+</script>
 </body>
 </html>

@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tính tổng các chữ số</title>
+    <script>
+        /*
+        Nhập một số nguyên dương. Tính tổng các chữ số của nó.
+        vd: n = 123
+        sum = 0;
+        while(n>0)
+            dư = n%10
+            sum += dư
+            n = n/10
+         */
+        function sumDigits(n) {
+            let sum = 0;
+            while (n > 0){
+                sum += n % 10;
+                n = Math.floor(n/10);
+            }
+            return sum;
+        }
+        function tinhTong() {
+            let n = Number(document.getElementById("num").value);
+            document.getElementById("result").innerHTML = "Tính tổng các chữ số của nó là: " + sumDigits(n);
+
+        }
+
+    </script>
+
 </head>
 <body>
-$END$
+<input type="text" id="num" placeholder="Enter your number">
+<button type="button" onclick="tinhTong()">Sum Digits</button><br>
+<span id="result"></span>
+
 </body>
 </html>
