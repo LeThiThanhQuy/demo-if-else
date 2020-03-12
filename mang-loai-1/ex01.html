@@ -20,15 +20,16 @@
         let e = "<hr/>";
         let x = 0;
         let array = Array();
-        array[x] = document.getElementById("txtValue").value;
+        array[x] = Number(document.getElementById("txtValue").value);
         for (let i = 0; i < array.length; i++) {
-            e += "Element " + i + " = " + add_element_to_array() + "<br/>";
+            e += "Element " + i + " = " + array[i] + "<br/>";
         }
         document.getElementById("result").innerHTML = e;
     }
 </script>
 
 <body>
+<h2><b>Sample Screen</b></h2>
 <input type="text" id="txtValue">
 <input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();">
 <input type="button" id="btnDisplay" value="Display" onclick="display_array();">
