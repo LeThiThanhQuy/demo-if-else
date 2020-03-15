@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary's</title>
+</head>
+<body>
+<form>
+    English: <input type="text" id="eng">
+    <input type="image" src="red-blue-arrows.jpg" width="25" height="20">
+    Vietnamese: <input type="text" id="vn">
+</form>
+<br>
+<button id="dictionary" onclick="lookUp()">Look up</button>
+<script>
+
+    function lookUp() {
+        let inputEnglish = document.getElementById("eng").value;
+        let english = ["watermelon", "apple", "lemon","orange"];
+        let vietnam = ["dưa hấu", "táo", "chanh", "cam"];
+
+        for (let i = 0; i < english.length; i++) {
+            if (inputEnglish === english[i]) {
+                document.getElementById("vn").valua = vietnam[i];
+            }
+            document.getElementById("vn").valua = "khong tim thay";
+        }
+
+    }
+</script>
+
+</body>
+</html>
