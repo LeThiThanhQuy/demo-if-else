@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function convertFeetToMet(feet) {
+            let result;
+            result = feet * 0.305;
+            return result;
+        }
+
+        function convertMetToFeet(met) {
+            let result;
+            result = met / 0.305;
+            return result;
+        }
+
+        function mainFeetToMet() {
+            let inputLength = document.getElementById("feet").value;
+            document.getElementById("meter").value = convertFeetToMet(inputLength);
+        }
+
+        function mainMetToFeet() {
+            let inputLength = document.getElementById("meter").value;
+            document.getElementById("feet").value = convertMetToFeet(inputLength);
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="feet" placeholder="By feet">
+<input type="button" onclick="mainFeetToMet()" value="Convert Feet to Meter" style="color:blueviolet;"><br>
+
+<input type="text" id="meter" placeholder="By meter">
+<input type="button" onclick="mainMetToFeet()" value="Convert Meter to Feet" style="color:blueviolet;"><br>
+</body>
+</html>
