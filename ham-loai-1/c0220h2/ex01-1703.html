@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <script>
+        /*
+        Viết hàm tính giai thừa của 1 số nguyên dương
+         */
+        
+        function calFractorial(n) {
+            let s = 1;
+            for ( let i = 1; i <=n; i++)
+                s *= i;
+            return s;
+        }
+        function main() {
+            let n = +prompt("Nhập số nguyên dương: ");
+            alert("Giá trị giai thừa là: " + calFractorial(n));
+
+        }
+        main();
+
+        function calFractorialRec(n) {
+            if (n ===1)
+                return 1;
+            else return n*calFractorialRec(n-1);
+
+        }
+    </script>
 </head>
 <body>
-$END$
+
 </body>
 </html>

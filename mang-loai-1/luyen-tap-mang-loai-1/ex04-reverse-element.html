@@ -2,9 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
+    <title>Title</title>
+    <script>
+       /*
+       Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên
+        và đảo ngược các phần tử trong mảng đó.
+        */
+       let x = 0;
+       let inputData = Array();
+       function addElement() {
+           inputData[x] = document.getElementById("input").value;
+           alert("Element: " + inputData[x] + " Added at index " + x);
+           x++;
+           document.getElementById("input").value = "";
+       }
+       function reverseArray() {
+           let last = inputData.length-1;
+           for (let first = 0; first < inputData.length; first++ ) {
+               while (first < last) {
+               let temp = inputData[first];
+               inputData[first] = inputData[last];
+               inputData[last] = temp;
+               first++;
+               last--
+                }
+           }
+        document.getElementById("result").innerHTML = "Reverse array is " + inputData;
+       }
+
+    </script>
+ </head>
 <body>
-$END$
+<input type="text" id="input">
+<input type="button" id="btnAdd" value="Add" onclick="addElement();">
+<input type="button" id="btnDisplay" value="Reverse" onclick="reverseArray();">
+<div id="result"></div>
 </body>
 </html>

@@ -2,9 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <script>
+        /*
+        Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi
+         */
+        let x = 0;
+        let inputData = Array();
+        function addElement() {
+            inputData[x] = document.getElementById("input").value;
+            alert("Element: " + inputData[x] + " Added at index " + x);
+            x++;
+            document.getElementById("input").value = "";
+        }
+        function countNegative() {
+            let e = "<hr>";
+            let count = 0;
+            for (let i = 0; i < inputData.length; i++) {
+                if ( inputData[i] < 0) {
+                    count += 1;
+                }
+             }
+            document.getElementById("result").innerHTML = count + " Negative number";
+        }
+    </script>
 </head>
 <body>
-$END$
+<input type="text" id="input">
+<input type="button" id="btnAdd" value="Add" onclick="addElement();">
+<input type="button" id="btnDisplay" value="Count Negative Number" onclick="countNegative();">
+<div id="result"></div>
+
 </body>
 </html>

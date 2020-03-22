@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<button onclick="init()">Create Human</button>
+<button onclick="init()">Create Human</button>
+
+<div id="content"></div>
+<canvas id="myCanvas" width="600" height="400" style="background-color: aquamarine"></canvas>
+<script>
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext('2d');
+
+    class Circle {
+        constructor(x, y, radius, color) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = color;
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+            ctx.closePath();
+        }
+    }
+
+    for (let i = 0; i < 10; i++) {
+        let x = Math.random() * 500;
+        let y = Math.random() * 500;
+        let r = Math.random() * 30 + 10;
+        let circle = new Circle(x, y, r);
+
+    }
+
+</script>
 </body>
 </html>

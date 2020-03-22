@@ -2,9 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <script>
+        /*
+        Bài 3- Viết chương trình khởi tạo mảng số nguyên.
+         Hiển hiện giá trị lớn nhất trong mảng đó.
+         In ra giá trị trung bình của các phần tử trong mảng.
+         */
+        let x = 0;
+        let array = Array();
+
+        function add_element_to_array() {
+            array[x] = document.getElementById("txtValue").value;
+            alert("Element: " + array[x] + " Added at index " + x);
+            x++;
+            document.getElementById("txtValue").value = "";
+        }
+        function max_in_array() {
+            let e = "<hr>";
+            let i = 0;
+            let max = array[i];
+            for ( i = 0; i < array.length; i++) {
+                if ( array[i] >max) {
+                    max = array[i];
+                }
+                e = "Element largest in the array is " + array[i] + " at index " + i;
+            }
+            document.getElementById("max").innerHTML = e;
+        }
+        function averageArray() {
+            let sum = 0;
+            let average = 0;
+            for (let i = 0; i < array.length; i++) {
+                sum = sum + Number.parseInt(array[i]);
+            }
+            average = "The average value of the elements in the array: " + sum/array.length;
+            document.getElementById("average").innerHTML = average;
+        }
+
+    </script>
 </head>
 <body>
-$END$
+<input type="text" id="txtValue">
+<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();">
+<input type="button" id="btnDisplay" value="Max in array" onclick="max_in_array();">
+<input type="button" id="averageDisplay" value="Average" onclick="averageArray();">
+<div id="max"></div>
+<div id="average"></div>
+
+
 </body>
 </html>

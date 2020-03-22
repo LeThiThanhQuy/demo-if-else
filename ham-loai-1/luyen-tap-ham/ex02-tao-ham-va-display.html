@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+
 </head>
 <body>
-$END$
+<input type="text" id="num" placeholder="Enter your number">
+<input type="button" value="Add 1" onclick="mainAddOne()">
+<div id="result"></div>
+<script>
+    /*
+   Bài 2: Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm.
+   Gọi hàm từ trong phần <body> của trang web và hiển thị kết quả lên màn hình.
+    */
+    function isNumber(a) {
+        if (typeof a === 'number')
+            return true;
+        else {
+            return false;
+        }
+    }
+    function mainAddOne() {
+        let result ='';
+        let myData = +document.getElementById("num").value;
+        if (isNumber(myData)){
+             result = myData +1;
+             document.getElementById("result").innerHTML = myData + " + 1 = " + result;
+         } else document.getElementById("result").innerText = myData + " isn't Number";
+    }
+</script>
 </body>
 </html>

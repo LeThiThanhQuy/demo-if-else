@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <script>
+        /*
+        Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau.
+        Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.
+         */
+        let x = 0;
+        let array = Array();
+
+        function add_element_to_array() {
+            array[x] = document.getElementById("txtValue").value;
+            alert("Element: " + array[x] + " Added at index " + x);
+            x++;
+            document.getElementById("txtValue").value = "";
+        }
+        function max_in_array() {
+            let e = "<hr>";
+            let i = 0;
+            let max = array[i];
+            for (i = 0; i < array.length; i++) {
+                if ( array[i] >max) {
+                    max = array[i];
+                }
+                e = "Element largest in the array is " + array[i] + " at index " + i;
+            }
+            document.getElementById("result").innerHTML = e;
+        }
+
+    </script>
 </head>
 <body>
-$END$
+<input type="text" id="txtValue">
+<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();">
+<input type="button" id="btnDisplay" value="Display" onclick="max_in_array();">
+<div id="result"></div>
+
 </body>
 </html>

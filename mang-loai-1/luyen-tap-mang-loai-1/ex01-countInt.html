@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <script>
+        /*
+        Bài 1- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử.
+         Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.
+         */
+        let x = 0;
+        let inputArray = Array();
+        function inputData() {
+            inputArray[x] = document.getElementById("input").value;
+            alert("Element " +  inputArray[x] + " Added at index " + x);
+            x++;
+            document.getElementById("input").value = "";
+        }
+        function displayArray() {
+            let str = "<hr>";
+            for (let i = 1; i < inputArray.length; i++) {
+                if (inputArray[i] >= 10) {
+                    str = str +inputArray[i] + "<br>";
+                }
+            }
+            document.getElementById("result").innerHTML = str;
+        }
+    </script>
 </head>
 <body>
-$END$
+<input type="text" id="input">
+<input type="button" value="Add" onclick="inputData()">
+<input type="button" value="display" onclick="displayArray()">
+<div id="result"></div>
 </body>
 </html>

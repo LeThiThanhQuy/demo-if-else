@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        const MAX = 100;
+        function MyArray() {
+            this.arr = new Array(MAX);
+            // Khởi tạo mảng
+            this.init = function () {
+                for( let i = 0; i < MAX; i++)
+                    this.arr[i] = Math.round(Math.random()*100);
+            }
+            //　Hiện mảng
+            this.show = function () {
+                document.write(this.arr.join(" , "));
+
+
+                // Tìm kiếm tuần tự
+                this.frequentSearch = function (x) {
+                    for ( let i = 0; i < this.arr.length; i++)
+                        if (this.arr[i] === x)
+                            return 1;
+
+                    return -1;
+                }
+
+            }
+            // Tìm kiếm tuần tự và trả lại ds các vị trí
+            this.frequentSearchList = function (x) {
+                let resultArray = new Array();
+                for ( let i = 0; i < this.arr.length; i++)
+                    if (this.arr[i] === x)
+                        resultArray.push(i);
+
+                return resultArray;
+
+            }
+
+            // Tìm kiếm nhị phân bằng đệ quy
+            this.binarySearch = function (left, right, x) {
+                if (left > right)
+                    return -1;
+                let middle = Math.floor((left + right) / 2);
+
+                while (left <= right) {
+                    let middle = Math.floor((left + right) / 2);
+                    if (this.arr[middle] === x)
+                        return middle;
+                    else if (this.arr[middle] > x)
+                        right = middle - 1;
+                    else left = middle - 1;
+                }
+                return -1;
+
+
+            }
+        }
+        function main() {
+            let myArr = new MyArray();
+
+            myArr.init();
+            myArr.show();
+
+            let x = 123;
+            document.write("<br> Vị trí của " + x + " trong danh sách là " + myArr.binarySearch());
+
+            /*let r = this.frequentSearchList(x);
+            if (r.length === 0)
+                document.write("Không tìm thấy! <br>");
+            else document.write("Kết quả là: " + r.join(" , "));
+
+             */
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

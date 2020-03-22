@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<button onclick="init()">Create Human</button>
+<button onclick="showInfo()">Show Info</button>
+<div id="content"></div>
+<script>
+    function Human(name, age) {
+        this.name = name;
+        this.age = age;
+        this.height = 150;
+        this.weight = 45;
+
+        this.eat = function () {
+            alert(this.name + "eating");
+        }
+    }
+    function eat(food) {
+        food.width--;
+        this.width++;
+    }
+    class Food {
+        constructor(weight) {
+            this.width = weight;
+        }
+
+        checkEmpty() {
+            // if (this.weight <= 0){
+            // return false;
+            // }
+            //return true;
+            return (this.weight <= 0) ? true : false;
+        }
+    }
+
+    function init() {
+        let quy = new Human("Quy", 18);
+        let long = new Human("Long", 30);
+        let hoa = new Human("Hòa", 24);
+        let students = [long, quy, hoa];
+        let str = "";
+        for (let i = 0; i < students.length; i++){
+            str += `name : ${students[i].name} has ${students[i].age} age <br>`;
+        }
+        document.getElementById("content").innerHTML = str;
+    }
+</script>
+
 </body>
 </html>

@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+
 </head>
 <body>
-$END$
+<div id="array"></div>
+<input type="button" value="Sort Array" onclick="sortArray()">
+<div id="result"></div>
+<script>
+    /*
+    Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.
+    Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
+     */
+    let arr = [];
+
+    function inputData() {
+        let text = "";
+        for (let i = 0; i < 10; i++) {
+            text = prompt("Enter element at index " + i + ":");
+            arr.push(text);
+        }
+        document.getElementById("array").innerHTML = text;
+    }
+
+    function sortArray() {
+        inputData();
+        arr.sort(function (a,b) {
+            return b-a;
+        });
+        document.getElementById("result").innerHTML = arr;
+
+    }
+
+</script>
 </body>
 </html>

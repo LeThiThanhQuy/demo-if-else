@@ -2,9 +2,149 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Mảng đa chiều</title>
+    <script>
+        /*
+        1, Nhập số phần tử mỗi chiều của mảng 2 chiều
+        2,Khởi tạo giá trị của mảng
+        3,Hiện  mảng
+        4,Tính tổng hàng/cột
+        5, Tính các giá trị chẵn, lẻ, chính phương, nguyên tố
+        6, Sắp xếp mảng theo chiều từ trái qua phải, từ trên xuống dưới
+        7, Sắp xếp mảng theo tổng hàng tổng cột
+        */
+    </script>
 </head>
 <body>
-$END$
+<script>
+    let myArray;
+    let nRow, nColumn;
+
+    function initArray() {
+        nRow = +prompt('Nhập số dòng: ');
+        nColumn = +prompt('Nhập số cột: ');
+        myArray = Array(nRow);
+        for (let i = 0; i < nRow; i++) {
+            myArray[i] = Array(nColumn);
+            for (let j = 0; j < nColumn; j++) {
+                myArray[i][j] = Math.round(Math.random() * 100);
+            }
+        }
+    }
+
+    function showArray() {
+        let i, j;
+        document.write("<table border = '1'>");
+        for (i = 0; i < nRow; i++) {
+            document.write('<tr>')
+            for (j = 0; j < nColumn; j++) {
+                document.write('<td>' + myArray[i][j] + '</td>');
+                document.write('<br>');
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+    }
+
+    function calRowSum(rowIndex) {
+        if (rowIndex <= 0 || rowIndex >= nRow) {
+            return 0;
+        }
+        let sum = 0;
+        for (let i = 0; i < nColumn; i++) {
+            sum += myArray[rowIndex][i];
+        }
+        return sum;
+    }
+
+    function calColumnSum(columnIndex) {
+        if (columnIndex <= 0 || columnIndex >= nColumn) {
+            return 0;
+        }
+        let sum = 0;
+        for (let i = 0; i < nRow; i++) {
+            sum += myArray[i][columnIndex];
+        }
+        return sum;
+    }
+
+    function calEvenValueSum() {
+        let sum = 0;
+        for (let i = 0; i < nRow; i++) {
+            for (let j = 0; j < nColumn; j++) {
+                if (myArray[i][j] % 2 === 0) {
+                    sum += myArray[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+
+    function calOddValueSum() {
+        let sum = 0;
+        for (let i = 0; i < nRow; i++) {
+            for (let j = 0; j < nColumn; j++) {
+                if (myArray[i][j] % 2 !== 0) {
+                    sum += myArray[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+
+    function calSquareValueSum() {
+        let sum = 0;
+        for (let i = 0; i < nRow; i++) {
+            for (let j = 0; j < nColumn; j++) {
+                if (Number.isInteger(Math.sqrt(myArray[i][j]))) {
+                    sum += myArray[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+
+    function calPrimeValueSum() {
+        let sum = 0;
+        let i, j;
+        for (i = 0; i < nRow; i++) {
+            for (j = 0; j < nColumn; j++) {
+                let flag = true;
+                for (let x = 2; x <= Math.sqrt(myArray[i][j]); x++) {
+                    if (myArray[i][j] % x === 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag === true) {
+                    sum += myArray[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+    function sortValue() {
+        for (let i = 0; i < nRow; i++) {
+            myArray.sort(compare);
+        }
+    }
+    function compare(a,b) {
+        return a-b;
+    }
+    initArray();
+    showArray();
+    document.write(calRowSum(1));
+    document.write('<br>');
+    document.write(calColumnSum(2));
+    document.write('<br>');
+    document.write('Tổng chẵn: ' + calEvenValueSum());
+    document.write('<br>');
+    document.write('Tổng lẻ: ' + calOddValueSum());
+    document.write('<br>');
+    document.write('Tổng chính phương: ' + calSquareValueSum());
+    document.write('<br>');
+    document.write('Tổng nguyên tố: ' + calPrimeValueSum());
+    sortValue();
+</script>
 </body>
 </html>
