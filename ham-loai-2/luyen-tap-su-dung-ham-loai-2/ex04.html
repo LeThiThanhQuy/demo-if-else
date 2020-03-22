@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*
+    Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.
+    Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+     */
+    let input = prompt('Nhập vào ký tự bất kỳ:');
+    function checkNumber() {
+        let num = /[0-9]/;
+        if (input.match(num)) {
+            alert("is Number");
+        } else alert("Not a Number");
+    }
+
+    checkNumber(input);
+</script>
+
+</body>
+</html>

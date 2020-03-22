@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+    /*--Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn.
+Gọi hàm vừa xây dựng đượ
+*/
+
+    const PI = 3.1415;
+    let radius = +prompt("Radius = ");
+
+    function areaOfCircle(r) {
+        areaCircle = r*r*PI;
+        alert('the area of a circle with a radius ' + r + ' is ' + areaCircle);
+    }
+    function perimeterOfCircle(r) {
+        perimeterCircle = 2*r*PI;
+        alert('the perimeter of a circle with a radius ' + r + ' is ' + perimeterCircle);
+    }
+
+    areaOfCircle(radius);
+    perimeterOfCircle(radius);
+</script>
+</body>
+</html>

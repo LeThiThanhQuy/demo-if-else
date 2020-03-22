@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="check()">Check</button><br/>
+<script>
+    /*
+    Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ,
+    kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+    Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+     */
+    let arr = [];
+    function createString(length) {
+        let txt = "";
+        let char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        for (let i = 0; i < length; i++) {
+            txt += char.charAt(Math.floor(Math.random() * char.length))
+        }
+        return txt;
+    }
+    function init() {
+        let elementArr = +prompt("Nhập vào số phần tử của mảng:");
+        for (let j = 1; j <= elementArr; j++) {
+            arr.push(createString(1));
+        }
+        document.write('<div>' + arr + '</div>');
+    }
+
+    function check() {
+        let characterCheck = prompt("Nhập vào ký tự cần đếm:");
+        let count = 0;
+        let index = arr.indexOf(characterCheck);
+        if (index !== -1) {
+            for (let i = 0; i < arr.length; i++) {
+                if (characterCheck === arr[i]) {
+                    count++;
+                }
+            }
+        } else
+            alert(-1);
+        alert("Số lần xuất hiện của ký tự " + characterCheck + " là " + count);
+    }
+
+    init();
+</script>
+
+</body>
+</html>

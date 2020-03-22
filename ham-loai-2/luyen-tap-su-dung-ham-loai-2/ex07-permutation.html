@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó
+    let num1 = +prompt("First number");
+    let num2 = +prompt("Second number");
+
+    function swap(a, b) {
+        let temp = a;
+        a = b;
+        b = temp;
+
+        alert ("First number = " + a + " , " + "Second number = " + b);
+    }
+
+    swap(num1,num2);
+</script>
+</body>
+</html>
