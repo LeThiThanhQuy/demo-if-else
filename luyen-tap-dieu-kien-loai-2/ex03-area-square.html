@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function areaSq() {
+        let edge = document.getElementById("inputData").value;
+        let areaSquare = edge * edge;
+
+        document.getElementById("result").innerHTML = "The Area is: " + areaSquare;
+    }
+</script>
+<label>Edge of the square: </label><input type="text" id="inputData" placeholder="Enter your number">
+<input type="button" onclick="areaSq()" value="The Area"><br>
+<div id="result"></div>
+
+</body>
+</html>

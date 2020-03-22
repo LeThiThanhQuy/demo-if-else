@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function areaRectangle() {
+        let length = document.getElementById("length").value;
+        let width = document.getElementById("width").value;
+        let areaRec = length * width;
+
+        document.getElementById("result").innerHTML = "The Area is: " + areaRec;
+    }
+</script>
+<label>The length: </label><input type="text" id="length" placeholder="Enter the length">
+<label>The Width: </label><input type="text" id="width" placeholder="Enter the width">
+<input type="button" onclick="areaRectangle()" value="The Area"><br>
+<div id="result"></div>
+
+</body>
+</html>

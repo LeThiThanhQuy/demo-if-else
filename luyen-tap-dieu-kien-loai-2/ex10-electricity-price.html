@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Power: </label><input type="text" id="electric" placeholder="kWh">
+<button type="button" onclick="electricityPrice()" >Price</button><br>
+<div id="result"></div>
+
+<script>
+    //Bài 10: Viết chương trình tính giá điện.
+    function electricityPrice() {
+        let kWh = document.getElementById("electric").value;
+        let price = 0;
+        if (kWh <= 0)
+            document.getElementById("result").innerHTML = "Chưa tiêu thụ điện năng";
+        else if (kWh <= 50) {
+            price = kWh * 1678;
+        } else if (kWh <= 100) {
+            price = 50 * 1678 + (kWh - 50) * 2014;
+        } else if (kWh <= 250) {
+            price = 50 * 1678 + 50 * 2014 + (kWh - 100) * 2834;
+        } else price = 50 * 1678 + 50 * 2014 + 150 * 2834 + (kWh - 250) * 2461;
+
+        document.getElementById("result").innerHTML = `Sử dụng ${kWh} kWh thành tiền là: ${price}`;
+    }
+
+
+</script>
+
+</body>
+</html>

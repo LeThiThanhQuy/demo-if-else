@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="result"></div>
+<script>
+    //Bài 7: Giải phương trình bậc 2. ax2 +bx +c = 0
+    let a = +prompt("a = ");
+    let b = +prompt("b = ");
+    let c = +prompt("c = ");
+    let x = 0, x1 = 0, x2 = 0;
+    if (a === 0) {
+        if (b === 0) {
+            document.getElementById("result").innerHTML =  "Phương trình vô nghiệm";
+        } else {
+            x = -b / a;
+        }
+    }
+    else{
+        let dental = b*b - 4*a*c;
+        if (dental < 0)
+            document.getElementById("result").innerHTML =  "Phương trình vô nghiệm";
+        if (dental === 0)
+            x = -b/(2*a);
+        if (dental > 0) {
+            x1 = (-b + Math.sqrt(dental)) / (2 * a);
+            x2 = (-b - Math.sqrt(dental)) / (2 * a);
+        }
+    }
+
+    document.getElementById("result").innerHTML =  x +"<br>";
+    document.getElementById("result").innerHTML =  x1 +"<br>";
+    document.getElementById("result").innerHTML =  x2 +"<br>";
+
+</script>
+
+</body>
+</html>
