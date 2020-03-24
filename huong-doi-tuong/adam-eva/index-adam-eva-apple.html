@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="init()">Create Human</button>
+<button onclick="humanEat(adam,apple),humanEat(eva,apple)">Eating</button>
+<div id="content"></div>
+<div id="say"></div>
+<div id="displayEat"></div>
+<script>
+    //[Bài tập] Phát triển ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva
+    function Human(name, gender, weight) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+
+        this.isMale = function () {
+            if(this.gender)
+                return true;
+            else return  false;
+        }
+        this.setGender = function (inputGender) {
+            this.gender = inputGender;
+        }
+        this.checkApple = function(Apple){
+            if (Apple.isEmpty())
+                return false;
+            else return true;
+        }
+
+        this.eat = function (Apple) {
+            this.weight++;
+        }
+        this.say = function () {
+            document.getElementById("say").innerHTML = "out of apple";
+        }
+        this.getName = function f() {
+            return this.name;
+        }
+        this.setName = function (inputName) {
+            this.name =inputName;
+        }
+        this.getWeight = function () {
+            return this.weight;
+        }
+        this.setWeight = function (inputWeight) {
+            this.weight = inputWeight;
+        }
+    }
+
+    function Apple(weight) {
+        this.weight = weight;
+
+        this.decrease = function () {
+            this.weight--;
+        }
+        this.isEmpty = function () {
+            return (this.weight <= 0 ? true : false);
+        }
+        this.getWeight = function () {
+            return this.weight;
+        }
+    }
+    let adam = new Human("Adam", "Male", 70);
+    let eva = new Human("Eva", "Female", 50);
+    let apple = new Apple(10);
+    function init() {
+        let str = "";
+        let human = [adam, eva];
+        for (let i = 0; i < human.length; i++) {
+            str += `name : ${human[i].name} , sex:  ${human[i].sex},  weight: ${human[i].weight} <br>`;
+        }
+        document.getElementById("content").innerHTML = str;
+    }
+    function humanEat(human, apple) {
+       if (human.checkApple(apple)){
+           human.eat();
+           apple.decrease();
+       }
+       else {
+           human.getWeight();
+           apple.getWeight();
+           return human.say();
+       }
+
+       console.log(human.getWeight(), apple.getWeight());
+     }
+
+</script>
+
+</body>
+</html>
