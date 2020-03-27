@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AIRCRAFT SHOOT GAME</title>
+
+
+</head>
+<body>
+<div align="center" style="color: blueviolet"><h1><b>AIRCRAFT SHOOT GAME</b></h1></div>
+<div id="score" align="center"></div>
+
+<div align="center"><canvas id="myCanvas" width="800px" height="500px" style="border:10px solid #d3d3d3;"><br></canvas></div>
+<div align="center"><button type="button" onclick="listBullets()" style="background-color: crimson">SHOOT</button></div><br>
+
+
+    <script>
+        const ctx = document.getElementById("myCanvas").getContext("2d");
+        const planeImage = new Image();
+        planeImage.src = "img/plane.png";
+        const tankImage = new Image();
+        tankImage.src = "img/tank1.jpg";
+
+        function Plane(x, y, height, width) {
+            this.x = x;
+            this.y = y;
+            this.height = height;
+            this.width = width;
+            this.isCrashed = false;
+
+            this.draw = function () {
+                ctx.drawImage(planeImage, this.x, this.y, this.height, this.width);
+            }
+        }
+
+        function drawPlane() {
+            for (let plane of planes) {
+                plane.draw();
+            }
+        }
+        function creatPlane() {
+            let listPlane = new Plane(0, Math.random() * 200 + 50, 50, 50);
+            planes.push(listPlane);
+        }
+
+        function Tank(x, y, height, width) {
+            this.x = x;
+            this.y = y;
+            this.height = height;
+            this.width = width;
+            this.speed = 8;
+            this.isMovingLeft = false;
+            this.isMovingRight = false;
+
+            this.draw = function () {
+                ctx.drawImage(tankImage, this.x, this.y, this.height, this.width);
+            }
+        }
+
+        window.addEventListener("keydown", move);
+        function move(event) {
+            console.log(event.key);
+            switch (event.key) {
+                case "ArrowLeft":
+                    tank.isMovingRight = false;
+                    tank.isMovingLeft = true;
+                    break;
+                case "ArrowRight":
+                    tank.isMovingLeft = false;
+                    tank.isMovingRight = true;
+                    break;
+            }
+        }
+
+        function moveTank() {
+            if (tank.isMovingLeft) {
+                tank.x -= tank.speed;
+            } else if (tank.isMovingRight) {
+                tank.x += tank.speed;
+            }
+
+            if (tank.x < 0) {
+                tank.x = 0;
+            } else if (tank.x > document.getElementById("myCanvas").width - tank.width) {
+                tank.x = document.getElementById("myCanvas").width - tank.width;
+            }
+        }
+
+        function drawBullet() {
+            for (const bullet of bullets) {
+                ctx.beginPath();
+                ctx.fillStyle = "blue";
+                ctx.arc(bullet.x, bullet.y, 5, 0, 2 * Math.PI);
+                ctx.fill();
+            }
+        }
+
+        function listBullets() {
+            let newBullet = {
+                x: tank.x + 23,
+                y: tank.y
+            };
+            bullets.push(newBullet);
+        }
+
+
+        function update() {
+            // plane.x = (plane.x + 10) % 800;
+            // if (plane.isCrashed)
+            //     plane.y = plane.y + 20;
+
+            for (let plane of planes) {
+                plane.x = plane.x + 5;
+                if (plane.isCrashed) {
+
+                    plane.y = plane.y + 20;
+                }
+            }
+            for (const bullet of bullets) {
+                bullet.y = (bullet.y - 30)
+            }
+
+            checkPlaneCrash();
+            crashedPlane();
+            resetScreen();
+            drawPlane();
+            drawBullet();
+            tank.draw();
+            moveTank();
+        }
+
+        function isBulletOnPlane(plane, bullet) {
+            if (Math.abs(plane.x - bullet.x) < 25 && Math.abs(plane.y - bullet.y) < 25)
+                return true;
+            else return false;
+        }
+
+        function checkPlaneCrash() {
+            for (const bullet of bullets) {
+                for (let plane of planes)
+                    if (isBulletOnPlane(plane, bullet)) {
+                        plane.isCrashed = true;
+                        return plane.isCrashed;
+                    }
+            }
+        }
+
+        function crashedPlane() {
+            if (plane.isCrashed) {
+                plane = {
+                    x: 0,
+                    y: 100,
+                    isCrashed: false
+                }
+            }
+        }
+
+        let plane = new Plane(0, Math.random() * 200 + 50 , 50, 50);
+        let tank = new Tank(350, 400, 100, 100);
+        let planes = [];
+        let bullets = [];
+
+        function resetScreen() {
+            ctx.clearRect(0, 0, document.getElementById("myCanvas").width, document.getElementById("myCanvas").height);
+        }
+
+        setInterval(creatPlane, 1000);
+        setInterval(update, 80);
+
+    </script>
+<script src="myJavascript/score.js"></script>
+</body>
+</html>
