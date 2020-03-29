@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GAME MOVE OBJECT</title>
+</head>
+<body>
+<canvas id="myCanvas" width="800px" height="500px" style="border:10px solid #d3d3d3;">
+<script>
+    const ctx = document.getElementById("myCanvas").getContext("2d");
+    const tankImage = new Image();
+    tankImage.src = "img/tank1.jpg";
+    function Tank(x, y, height, width) {
+        this.x = x;
+        this.y = y;
+        this.height = height;
+        this.width = width;
+        this.speed = 10;
+        this.isMovingLeft = false;
+        this.isMovingRight = false;
+        this.isMovingUp= false;
+        this.isMovingDown = false;
+
+        this.draw = function () {
+            ctx.drawImage(tankImage, this.x, this.y, this.height, this.width);
+        }
+    }
+
+    window.addEventListener("keydown", move);
+    function move(event) {
+        console.log(event.key);
+        switch (event.key) {
+            case "ArrowLeft":
+                tank.isMovingRight = false;
+                tank.isMovingLeft = true;
+                break;
+            case "ArrowRight":
+                tank.isMovingLeft = false;
+                tank.isMovingRight = true;
+                break;
+            case "ArrowUp":
+                tank.isMovingDown = false;
+                tank.isMovingUp = true;
+                break;
+            case "ArrowDown":
+                tank.isMovingUp = false;
+                tank.isMovingDown = true;
+                break;
+        }
+    }
+
+    function moveTank() {
+        if (tank.isMovingLeft) {
+            tank.x -= tank.speed;
+        } else if (tank.isMovingRight) {
+            tank.x += tank.speed;
+        }
+        if (tank.isMovingUp) {
+            tank.y -= tank.speed;
+        } else if (tank.isMovingDown) {
+            tank.y += tank.speed;
+        }
+
+        if (tank.x < 0) {
+            tank.x = 0;
+        } else if (tank.x > document.getElementById("myCanvas").width - tank.width) {
+            tank.x = document.getElementById("myCanvas").width - tank.width;
+        }
+        if (tank.y < 0) {
+            tank.y = 0;
+        } else if (tank.y > document.getElementById("myCanvas").height - tank.height) {
+            tank.y = document.getElementById("myCanvas").height - tank.height;
+        }
+
+    }
+    let tank = new Tank(350, 400, 100, 100);
+    function update(){
+        tank.draw();
+        moveTank();
+    }
+
+    setInterval(update, 80);
+</script>
+
+</body>
+</html>
