@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+
+</head>
+
+<body>
+<div class="mobile" id="mobile1">
+    <div class="title" id="iphone">Iphone</div>
+    <span id="battery1">Battery: 100%</span>
+    <div class="inbox" id="iphoneInbox">Inbox</div>
+    <div class="outbox" id="iphoneOutbox">Outbox</div>
+    <br>
+    <input class="msg" id="iphoneMsg" oninput="mobile1.writeMess(this.value)">
+    <button class="send" id="iphoneSendMsg" onclick="sendMess(mobile1, mobile2)">Send</button>
+    <div>
+        <input type="button" id="switchButton1" value="Turn off the phone" onclick="switchOnOff()">
+    </div>
+    <br>
+    <div>
+        <input type="button" id="charge1" value="Charge" onclick="chargeBattery()">
+    </div>
+</div>
+<div class="mobile" id="mobile2">
+    <div class="title" id="samsung">Samsung</div>
+    <span id="battery2">Battery: 100%</span>
+    <div class="inbox" id="samsungInbox">Inbox</div>
+    <div class="outbox" id="samsungOutbox">Outbox</div>
+    <br>
+    <input class="msg" id="samsungMsg" oninput="mobile2.writeMess(this.value)">
+    <button class="send" id="samsungSendMsg" onclick="sendMess(mobile2, mobile1)">Send</button>
+    <div>
+        <input type="button" id="switchButton2" value="Turn off the phone" onclick="switchOnOff()">
+    </div>
+    <br>
+    <div>
+        <input type="button" id="charge2" value="Charge" onclick="chargeBattery()">
+    </div>
+</div>
+<script src="add-phone.js"></script>
+</body>
+</html>
